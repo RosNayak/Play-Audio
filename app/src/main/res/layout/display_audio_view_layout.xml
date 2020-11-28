@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/bottomNavView"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/black"
+app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivControlBottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/up_nav"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvSongTitle"/>
+
+        <TextView
+            android:id="@+id/tvSongTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/ivControlBottomSheet"
+            app:layout_constraintEnd_toStartOf="@+id/ivControlMusicPlay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivControlMusicPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_icon"
+            android:contentDescription="@string/paused"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<ImageView
+    android:id="@+id/imageViewMusicIcon"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/big_music_icon"
+    android:background="@drawable/music_icon_background"
+    android:layout_margin="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/topLayout"/>
+
+<TextView
+    android:id="@+id/tvMusicTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:textAllCaps="false"
+    android:text="Play a audio"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:textSize="25sp"
+    android:layout_margin="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageViewMusicIcon"/>
+
+<ImageView
+    android:id="@+id/imageViewSkipPrevious"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/skip_left"
+    android:layout_margin="16sp"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintEnd_toStartOf="@+id/imageViewControlMusic"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvMusicTitle"/>
+
+<ImageView
+    android:id="@+id/imageViewControlMusic"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/pause"
+    android:layout_margin="16sp"
+    android:contentDescription="@string/paused"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintEnd_toStartOf="@+id/imageViewSkipNext"
+    app:layout_constraintStart_toEndOf="@+id/imageViewSkipPrevious"
+    app:layout_constraintTop_toBottomOf="@+id/tvMusicTitle"/>
+
+<ImageView
+    android:id="@+id/imageViewSkipNext"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/skip_right"
+    android:layout_margin="16sp"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toEndOf="@+id/imageViewControlMusic"
+    app:layout_constraintTop_toBottomOf="@+id/tvMusicTitle"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

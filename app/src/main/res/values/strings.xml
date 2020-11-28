@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Play Audio</string>
+    <string name="play_audio">Play Audio</string>
+    <string name="play">Play</string>
+    <string name="temp_text">Temp text</string>
+
+    <string name="audioChannelId">Audio Channel</string>
+    <string name="audioChannelName">Audio</string>
+    <string name="audioChannelDescriptionText">Audio notifications.</string>
+    <string name="paused">paused</string>
+    <string name="small_play">play</string>
+
+</resources>
