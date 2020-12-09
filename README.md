@@ -4,7 +4,7 @@ App to play audio in the background while you can continue doing other work whil
 Language: Kotlin
 
 Concepts used in this Project:
-Foreground Services
-Notifications
-Bottom Sheet
-Material Design
+Foreground Services,
+Notifications,
+Bottom Sheet,
+Material Design.
